@@ -15,10 +15,10 @@
         <li>Syntax: PHP code is embedded within HTML using &lt;?php .... ?&gt; tags. </li>
         <li>Comments: Use // for single-line comments and /* ... */ for multi-line comments.</li>
         <li>Case Sensitivity: PHP is case-sensitive; variable names are case-sensitive.</li>
-        <li>Variables: Declare variables using the $ symbol (e.g., $beeCount).</li>
+        <li>Variables: Declare variables using the $ symbol (e.g., $mothCount).</li>
         <li>Echo/Print: Use echo or print to display content on the page.</li>
         <li>Data Types: PHP supports various data types, including strings, numbers, and arrays.</li>
-        <li>String Concatenation: Combine strings with the . operator (e.g., $greeting . ' from PHP!').</li>
+        <li>String Concatenation: Combine strings with the . operator (e.g., $greetings . ' from Sky kingdom!').</li>
 
     </ul>
     <section>
@@ -28,7 +28,7 @@
         <?php
             $mothCount = 50000;
             $SkyKid = "Moths";
-            $greeting = "Hello Sky kid";
+            $greetings = "Hello Sky kid";
 
             $kidSize = "chibi, normal and tall";
             $candles = 20.5;
@@ -41,7 +41,7 @@
             $CandleCollected = "On average, sky kids can collect up to $averageCandleCollection candles per day.";
             $lazyInfo = $isLazy ? "They are considered lazy." : "They are not considered lazy.";
 
-            echo "<p>$greeting from PHP 🌎!</p>";
+            echo "<p>$greetings from SKY kingdom!</p>";
             print "<p>There are approximately $mothCount $SkyKid in the kingdom of sky.</p>";
             echo "<p>$SkyKidDescription</p>";
             echo "<p>$CandleCollected</p>";
@@ -50,6 +50,7 @@
 
         <p>There are various kinds of sky kids there the candle runner, sleeper, the musician, the veteran, and the killer moth.</p>
     </section>
+    
     <footer>
         <p>&copy; 2023 the sky kingdom</p>
     </footer>
