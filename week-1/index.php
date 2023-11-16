@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sky kids</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>Welcome to the sky kingdom</header>
+    <header><h1>Welcome to the sky kingdom</h1></header>
 
     <section>PHP basics</section>
     <p>Let's dive into some PHP fundamentals</p>
