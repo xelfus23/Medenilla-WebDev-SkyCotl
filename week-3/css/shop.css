@@ -1,0 +1,379 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    color: #fff;
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(transparent 10%, white 90%), url('../img/wallpaper.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 40px;
+}
+.title{
+    display: flex;
+    border: 2px solid white;
+    justify-content: center;
+    align-items: center;
+    width: 71%;
+    text-shadow: 5px 5px 10px black;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding:15px;
+    border-radius: 20px;
+    font-size: 50px;
+    margin-bottom: 5px;
+}
+form{
+    border: 2px solid rgb(255, 255, 255);
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: baseline;
+    padding: 30px;
+    border-radius: 15px;
+    width: auto;
+    height: auto;
+}
+.name {
+    margin-bottom:  20px;
+}
+.name label{
+    text-shadow: 5px 5px 10px black;
+    font-size: 20px;
+}
+.name input[type = "text"]{
+    margin-left: 15px;
+    width: 30%;
+    font-size: 15px;
+    color: #fff;
+    padding: 0.6em;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    outline: none;
+    border: none;
+    
+}
+.name input[type = "text"]::placeholder{
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.cape-type{
+    width: auto;
+    height: auto;
+
+    .cape-container{
+        display:flex;
+        flex-direction: column;
+        width: 100%;
+
+        .top-bottom{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            
+            .top{
+                display: flex;
+                width: 100%;
+            }
+            
+            .bottom{
+                display: flex;
+                width: 100%;
+            }
+        }
+
+        .capes{
+            width: 100%;
+            gap: 20px;
+            display: flex;
+            align-items:center;
+            justify-content: space-between;
+            background-color: rgba(0, 0, 0, 0.5);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            transition: 0.5s;
+        }
+
+        .capes label{
+            width: 100%;
+        }
+        .capes label p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position:relative;
+            width: 100%;
+            font-size: 20px;
+            padding: 0.6em;
+            border-radius: 20px;
+            background-color: #6b1616;
+        }
+        .capes:hover{
+            transform: translateX(10px);
+            cursor: pointer;
+        }
+        /* ------------------- CAPES HOVER ------------------*/
+        .capes input[type = "radio"]{
+            transition: 0.2s;
+            width: 150px;
+            height: 50px;
+            background-position: center;
+            background-size: cover;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+        .capes input[type = "radio"]:hover{
+            cursor: pointer;
+        }
+        .capes input[type = "radio"]:checked{
+            filter: drop-shadow(0px 0px 5px white);
+            scale: 1.2;
+        }
+        .capes label:hover{
+            cursor: pointer;
+        }
+
+        /* ------------------- CAPE COLORS ------------------*/
+        .blue-cape input[type = "radio"]{
+            background: url('../img/blue-cape.png') no-repeat;
+        }
+        /* ------------------- CAPE COLORS ------------------*/
+        .red-cape input[type = "radio"]{
+            background: url('../img/red-cape.png')no-repeat;
+        }
+        /* ------------------- CAPE COLORS ------------------*/
+        .yellow-cape input[type = "radio"]{
+            background: url('../img/yellow-cape.png')no-repeat;
+        }
+        /* ------------------- CAPE COLORS ------------------*/
+        .green-cape input[type = "radio"]{
+            background: url('../img/green-cape.png')no-repeat;
+        }
+        /* ------------------- CAPE COLORS ------------------*/
+        .white-cape input[type = "radio"]{
+            background: url('../img/white-cape.png')no-repeat;
+        }
+        /* ------------------- CAPE COLORS ------------------*/
+        .black-cape input[type = "radio"]{
+            background: url('../img/black-cape.png')no-repeat;
+        }
+    }
+    .sizes{
+        margin: 20px 20px;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        padding: 20px 20px;
+        height: 150px;
+    }
+    .size{
+        scale: 0.8;
+        margin: 20px 20px;
+        width: 80px;
+        height: 90px;
+    }
+    .size input[type = "radio"]{
+        width: 100%;
+        height: 90px;
+        transition: 0.2s;
+        background-position: center;
+        background-size: contain;
+        appearance: none;
+        -webkit-appearance: none;
+    }
+    .size input[type = "radio"]:hover{
+        cursor: pointer;
+    }
+    .size input[type = "radio"]:checked{
+        filter: drop-shadow(0px 0px 5px white);
+    }
+    .chibi{
+        height: 70px;
+    }
+    .normal{
+        height: 60px;
+    }
+    .tall{
+        height: 70px;
+    }
+    .chibi input[type = "radio"]{
+        background: url('../img/sizes/chibi.png')no-repeat;
+        scale: 0.5;
+
+    }.chibi input[type = "radio"]:checked{
+        scale: 0.6;
+        transform: translateY(-5px);
+    }
+    .normal input[type = "radio"]{
+        background: url('../img/sizes/normal.png')no-repeat;
+        scale: 1;
+    }
+    .normal input[type = "radio"]:checked{
+        scale: 1.1;
+        transform: translateY(-5px);
+    }
+    .tall input[type = "radio"]{
+        background: url('../img/sizes/tall.png')no-repeat;
+        scale: 1;
+    }
+    .tall input[type = "radio"]:checked{
+        scale: 1.1;
+        transform: translateY(-5px);
+    }
+
+    .head{
+        text-shadow: 5px 5px 10px black;
+    }
+
+    /*---------------------Candle container----------------------*/
+
+    .instrument-container{
+        display: flex;
+        width: 100%;
+        padding: 20px;
+        
+
+        .left-right{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 20px 0px 0px 20px;
+            overflow: hidden;
+
+            .left{
+                overflow: hidden;
+            }
+            .middle{
+                overflow: hidden;
+            }
+            .right{
+                overflow: hidden;
+            }
+        }
+        
+        .instruments{
+            width: 100%;
+            gap: 20px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            align-items:center;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: 0.5s;
+        }
+        .instruments label p{
+            height: 100%;
+        }
+        /* ------------------- ISNTRUMENTS ------------------*/
+
+        .instruments input[type = "checkbox"]:hover{
+            cursor: pointer;
+        }
+        .instruments label:hover{
+            cursor: pointer;
+        }
+        .instruments input[type= "checkbox"]{
+            background-position: center;
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+            transition: 0.2s;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+        .instruments input[type = "checkbox"]:checked{
+            filter: drop-shadow(0px 0px 5px white);
+            scale: 1.2;
+        }
+
+        .guitar input[type = "checkbox"]{
+            background: url('../img/instruments/guitar.png')no-repeat;
+        }
+        /* ------------------- INSTRUMENTS  ------------------*/
+
+        .piano input[type = "checkbox"]{
+            background: url('../img/instruments/piano.png')no-repeat;
+        }
+        /* ------------------- INSTRUMENTS  ------------------*/
+
+        .harp input[type = "checkbox"]{
+            background: url('../img/instruments/harp.png')no-repeat;
+        }
+        /* ------------------- INSTRUMENTS  ------------------*/
+
+        .xylophone input[type = "checkbox"]{
+            background: url('../img/instruments/xylophone.png')no-repeat;
+        }
+        /* ------------------- INSTRUMENTS  ------------------*/
+
+        .saxophone input[type = "checkbox"]{
+            background: url('../img/instruments/saxophone.png')no-repeat;
+        }
+        /* ------------------- DRUMS  ------------------*/
+
+        .drums input[type = "checkbox"]{
+            background: url('../img/instruments/drum.png')no-repeat;
+        }
+        
+        /* ------------------- HORN  ------------------*/
+
+        .horn input[type = "checkbox"]{
+            background: url('../img/instruments/horn.png')no-repeat;
+        }
+        /* ------------------- KALIMBA  ------------------*/
+
+        .kalimba input[type = "checkbox"]{
+            background: url('../img/instruments/kalimba.png')no-repeat;
+        }
+        /* ------------------- FLUTE  ------------------*/
+
+        .flute input[type = "checkbox"]{
+            background: url('../img/instruments/flute.png')no-repeat;
+        }
+
+        /* ------------------- CONTRABASS  ------------------*/
+
+        .contrabass input[type = "checkbox"]{
+            background: url('../img/instruments/contrabass.png')no-repeat;
+        }
+
+        /* ------------------- ISNTRUCTIONS  ------------------*/
+
+        .instructions{
+            width: 600px;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px 80px 0px 0px;
+            border-radius: 0px 20px 20px 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: ce;
+        }
+        .instructions label h1{
+            margin-bottom: 20px;
+        }
+        .instructions textarea{
+            margin-right: 40px;
+            resize: none;
+            padding: 10px;
+            color: #fff;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .instructions textarea::placeholder{
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+}
+/* ------------------- BUTTON ------------------*/
