@@ -192,35 +192,6 @@
 
         displayOrderSummary();
 
-        function insertDataToDatabase($name, $capeType, $size, $total_price, $instructions, $instrumentType){
-            include ("../php/database/database.php");
-
-            try{
-                $conn = new PDO("mysql:host=$db_host; dbname=$db_name", $db_username, $db_password);
-
-                $conn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-                $stmt = $conn -> prepare("INSERT INTO orders (name, cape_type, size, total_price, instructions, instrument_type)
-                    VALUES (:name, :cape_type, :size, :total_price, :instructions, :instrument_type)");
-
-                $extraString = implode(", ", $instrumentType);
-
-                $stmt->bindParam(':name', $name);
-                $stmt->bindParam(':cape_type', $capeType);
-                $stmt->bindParam(':size', $size);
-                $stmt->bindParam(':total_price', $total_price);
-                $stmt->bindParam(':instructions', $instructions);
-                $stmt->bindParam(':instrument_type', $extraString);
-
-                $stmt->execute();
-                echo "<br /> Order details inserted into the database successfully!";
-            }
-            catch (PDOException $e){
-                echo "Error:" . $e -> getMessage();
-            }
-
-        }
-        $conn = null;
     ?>
 
                     <div class="button">
