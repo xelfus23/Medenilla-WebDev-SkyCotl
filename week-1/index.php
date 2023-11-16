@@ -38,13 +38,13 @@
             $isLazy = true;
 
             $SkyKidDescription = "Sky kids are cute figure they have sizes like " . $kidSize . ".";
-            $lifespanInfo = "On average, sky kids can collect up to $averageCandleCollection candles per day.";
+            $CandleCollected = "On average, sky kids can collect up to $averageCandleCollection candles per day.";
             $lazyInfo = $isLazy ? "They are considered lazy." : "They are not considered lazy.";
 
             echo "<p>$greeting from PHP 🌎!</p>";
             print "<p>There are approximately $mothCount $SkyKid in the kingdom of sky.</p>";
             echo "<p>$SkyKidDescription</p>";
-            echo "<p>$lifespanInfo</p>";
+            echo "<p>$CandleCollected</p>";
             echo "<p>$lazyInfo</p>";
         ?>
 
