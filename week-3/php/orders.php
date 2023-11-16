@@ -165,7 +165,7 @@
 
         function generateReceiptContent($name, $capeType, $cape_prices, $size, $size_prices, $instrumentType, $instrument_prices, $total_price, $instructions){
             $receiptContent = "Order Summary\n";
-            $receiptContent = "-------------\n";
+            $receiptContent .= "-------------\n";
             $receiptContent .= "Name: " . $name ."\n";
             $receiptContent .= "Cape Type: " . $capeType . " ₱- " . number_format($cape_prices[$capeType], 2). "\n";
             $receiptContent .= "Size: " . $size ." ₱- " . number_format($size_prices[$size], 2) . "\n";
