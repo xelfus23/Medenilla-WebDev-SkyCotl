@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop Order Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1> Cape Order </h1>
+        <form method="POST" action="order.php">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="cape">Cape Color:</label>
+            <select id="cape" name="cape" required>
+                <option value="red-cape">Red Cape - ₱1000</option>
+                <option value="blue-cape">Blue Cape - ₱1000</option>
+                <option value="green-cape">Green Cape - ₱1000</option>
+                <option value="yellow-cape">Yellow Cape - ₱1000</option>
+            </select>
+
+            <div class="input-group">
+                <label>Size:</label>
+                <input type="radio" id="small" name="size" value="small" required>
+                <label for="small">Small + ₱0 </label>
+
+                <input type="radio" id="medium" name="size" value="medium">
+                <label for="medium">Medium + ₱100</label>
+
+                <input type="radio" id="large" name="size" value="large">
+                <label for="large">Large + ₱200</label>
+            </div>
+
+            <div class="input-group">
+                <label for="candles">Candles:</label><br>
+
+                <input type="checkbox" id="ten" name="candles[]" value="ten">
+                <label for="ten">10 Candles:<br> +₱9.99</label>
+
+                <input type="checkbox" id="twenty" name="candles[]" value="twenty">
+                <label for="twenty">20 Candles:<br> +₱19.99</label>
+
+                <input type="checkbox" id="thirty" name="candles[]" value="thirty">
+                <label for="thirty">30 Candles:<br> +₱29.99</label>
+            </div>
+
+            <label for="instructions">Special Instructions:</label>
+            <textarea id="instructions" name="instructions" rows="4"></textarea>
+
+            <button class="btn" type="submit">Place Order</button>
+        </form>
+        
+    </div>
+    
+</body>
+
+</html>
