@@ -57,8 +57,6 @@
                 displayOrderDetails($name, $cape_prices, $size_prices, $instrument_prices, $capeType, $size, $instrumentType, $total_price);
                 $receiptContent = generateReceiptContent($name, $capeType, $cape_prices, $size, $size_prices, $instrumentType, $instrument_prices, $total_price, $instructions);
                 saveReceiptToFile($receiptContent);
-
-                insertDataToDatabase($name, $capeType, $size, $total_price, $instructions, $instrumentType);
         
             }
         }
