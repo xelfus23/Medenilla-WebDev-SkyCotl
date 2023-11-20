@@ -1,0 +1,9 @@
+Order Summary
+----------------------------
+Name: Hiram Potter
+Cape Type: blue-cape ₱- 1,000.00
+Size: normal ₱- 199.99
+Instrument: piano, xylophone, saxophone, drums, flute - ₱ 7,500.00
+Total Price: ₱8,699.99
+
+Thank you for your order!

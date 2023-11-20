@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky Children of the light online cape shop</title>
+    <link rel="stylesheet" href="../css/shop.css">
+    <link rel="stylesheet" href="../css/gen.css">
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="container-shop">
+        <h1 class="title">Update order</h1>
+        <form action="../php/update.php" method="POST">
+
+            <div class="top-a">
+
+                <div class="name">
+
+                    <div class="name">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name" placeholder="Enter name here" autocomplete="off" required>
+                    </div>
+
+                    <div class="name">
+                        <label for="orderID">OrderID:</label>
+                        <input type="text" name="orderID" id="orderID" placeholder="Enter order ID" autocomplete="off" required>
+                    </div>
+                </div>
+
+                <div class="back">
+                    <a class="btn-1" href="../html/index.html">Go Back</a>
+                </div>
+
+            </div>
+            
+
+            <div class="cape-type">
+                <label><h1 class="head">Choose cape color:</h1></label>
+                <div class="cape-container">
+
+                    <div class="top-bottom">
+
+                        <div class="top">
+
+                            <div class="capes blue-cape">
+                                <input type="radio" name="capes" id="cape-1" value="blue-cape" required>
+                                <label for="cape-1">Blue cape</label>
+                                <label for="cape-1"><p>₱ 1000</p></label>
+                            </div>
+        
+                            <div class="capes red-cape">
+                                <input type="radio" name="capes" id="cape-2" value="red-cape" required>
+                                <label for="cape-2">Red cape</label>
+                                <label for="cape-2"><p>₱ 1000</p></label>
+                            </div>
+        
+                            <div class="capes yellow-cape">
+                                <input type="radio" name="capes" id="cape-3" value="yellow-cape" required>
+                                <label for="cape-3">Yellow cape</label>
+                                <label for="cape-3"><p>₱ 1000</p></label>
+                            </div>
+                        </div>
+    
+                        <div class="bottom">
+                            <div class="capes green-cape">
+                                <input type="radio" name="capes" id="cape-4" value="green-cape" required>
+                                <label for="cape-4">Green cape</label>
+                                <label for="cape-4"><p>₱ 1000</p></label>
+                            </div>
+        
+                            <div class="capes white-cape">
+                                <input type="radio" name="capes" id="cape-5" value="white-cape" required>
+                                <label for="cape-5">White cape</label>
+                                <label for="cape-5"><p>₱ 1500</p></label>
+                            </div>
+        
+                            <div class="capes black-cape">
+                                <input type="radio" name="capes" id="cape-6" value="black-cape" required>
+                                <label for="cape-6">Black cape</label>
+                                <label for="cape-6"><p>₱ 1500</p></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sizes">
+                    <h1 class="head">Sizes:</h1>
+                    <div class="size chibi">
+                        <input type="radio" name="sizes" id="chibi"  value="chibi" required>
+                    </div>
+                    <p>+ ₱0</p>
+                    <div class="size normal">
+                        <input type="radio" name="sizes" id="normal" value="normal" required>
+                    </div>
+                    <p>+ ₱200</p>
+                    <div class="size tall">
+                        <input type="radio" name="sizes" id="big" value="big" required>
+                    </div>
+                    <p>+ ₱500</p>
+                </div>
+
+                <label for="capes"><h1 class="head">instruments:</h1></label>
+
+                <div class="instrument-container">
+                    <div class="left-right">
+
+                        <div class="left">
+
+                            <div class="instruments guitar">
+                                <input type="checkbox" name="instruments[]" id="guitar" value="guitar">
+                                <label for="guitar">Guitar</label>
+                                <label for="guitar"><p>₱ 2000</p></label>
+                            </div>
+        
+                            <div class="instruments piano">
+                                <input type="checkbox" name="instruments[]" id="piano" value="piano">
+                                <label for="piano">Piano</label>
+                                <label for="piano"><p>₱ 1500</p></label>
+                            </div>
+        
+                            <div class="instruments harp">
+                                <input type="checkbox" name="instruments[]" id="harp" value="harp">
+                                <label for="harp">Harp</label>
+                                <label for="harp"><p>₱ 1500</p></label>
+                            </div>
+    
+                            <div class="instruments xylophone">
+                                <input type="checkbox" name="instruments[]" id="xylophone" value="xylophone">
+                                <label for="xylophone">Xylophone</label>
+                                <label for="xylophone"><p>₱ 1500</p></label>
+                            </div>
+        
+                            <div class="instruments saxophone">
+                                <input type="checkbox" name="instruments[]" id="saxophone" value="saxophone">
+                                <label for="saxophone">Saxophone</label>
+                                <label for="saxophone"><p>₱ 1500</p></label>
+                            </div>
+
+                        </div>
+
+                        <div class="middle">
+    
+                            <div class="instruments drums">
+                                <input type="checkbox" name="instruments[]" id="drums" value="drums">
+                                <label for="drums">Drums</label>
+                                <label for="drums"><p>₱ 1500</p></label>
+                            </div>
+    
+                            <div class="instruments horn">
+                                <input type="checkbox" name="instruments[]" id="horn" value="horn">
+                                <label for="horn">Horn</label>
+                                <label for="horn"><p>₱ 1000</p></label>
+                            </div>
+    
+                            <div class="instruments kalimba">
+                                <input type="checkbox" name="instruments[]" id="kalimba" value="kalimba">
+                                <label for="kalimba">Kalimba</label>
+                                <label for="kalimba"><p>₱ 2000</p></label>
+                            </div>
+    
+                            <div class="instruments flute">
+                                <input type="checkbox" name="instruments[]" id="flute" value="flute">
+                                <label for="flute">Flute</label>
+                                <label for="flute"><p>₱ 1500</p></label>
+                            </div>
+    
+                            <div class="instruments contrabass">
+                                <input type="checkbox" name="instruments[]" id="contrabass" value="contrabass">
+                                <label for="contrabass">Contrabass</label>
+                                <label for="contrabass"><p>₱ 1000</p></label>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="right">
+    
+                        <div class="instructions">
+                            <label for="instructions"><h1 class="head">Messages:</h1></label>
+                            <textarea maxlength="100" placeholder="Enter your messages here" name="instructions" id="instructions" cols="30" rows="15"></textarea>
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+            </div>
+            <div class="btn">
+                <div class="button">
+                    <input class="btn-1" type="submit" name="submit" value="Update Order">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

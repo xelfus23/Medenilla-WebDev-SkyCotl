@@ -1,0 +1,117 @@
+.delete{
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    border-radius: 15px;
+    border: 2px solid rgb(255, 255, 255);
+}
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    border-radius: 15px;
+    border: 2px solid white;
+    align-items: baseline;
+    padding: 30px;
+    width: auto;
+    height: auto;
+    background: rgba(0, 0, 0, 0.5);
+}
+.id div input[type="text"]{
+    outline: none;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    height: 30px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.id{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+}
+.id div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    height: 10%;
+    width: 50%;
+}
+.button{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.name{
+    display: flex;
+    flex-direction: column;
+}
+.id div label{
+    margin-bottom: 5px;
+}
+.ids{
+    display: flex;
+    flex-direction: column;
+}
+.confirm{
+    display: flex;
+    justify-content: space-between;
+}
+table{
+    height: auto;
+}
+th{
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+tr{
+    
+    background-color: rgba(0, 0, 0, 0.5);
+}
+td{
+    padding: 10px 20px;
+}
+h1{
+    margin-bottom: 25px;
+}
+h1{
+    margin-bottom: 25px;
+}
+.confirm-box{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: auto;
+    height: auto;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid rgb(255, 255, 255);
+}
+p{
+    margin: 15px 0px 0px 0px;
+}
+.confirm-id{
+    margin-bottom: 15px;
+    gap: 15px;
+    display: flex;
+    align-items: center;
+}
+.confirm-id input[type="text"]{
+    outline: none;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    height: 30px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+}
