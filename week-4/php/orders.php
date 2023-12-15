@@ -54,7 +54,7 @@
                 $size = $_POST['sizes'];
                 $instrumentType = isset($_POST["instruments"]) ? $_POST["instruments"] : [];
                 
-                //use the functions that I created bellow
+                //store the functions that I created bellow into variable
                 
                 $total_price = calculateTotalPrice($cape_prices, $size_prices, $instrument_prices, $capeType, $size, $instrumentType);
 
