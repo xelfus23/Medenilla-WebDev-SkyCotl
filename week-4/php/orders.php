@@ -54,7 +54,7 @@
                 $size = $_POST['sizes'];
                 $instrumentType = isset($_POST["instruments"]) ? $_POST["instruments"] : [];
                 
-                //store the functions that I created bellow into variable
+                //store the functions that I created bellow into variable so we can use them later
                 
                 $total_price = calculateTotalPrice($cape_prices, $size_prices, $instrument_prices, $capeType, $size, $instrumentType);
 
@@ -166,7 +166,7 @@
             <?php
 
         }
-
+//generate receipt function
         function generateReceiptContent($name, $capeType, $cape_prices, $size, $size_prices, $instrumentType, $instrument_prices, $total_price, $instructions){
             $receiptContent = "Order Summary\n";
             $receiptContent .= "----------------------------\n";
@@ -183,7 +183,7 @@
 
             return $receiptContent;
         }
-
+//create and save receipt file
         function saveReceiptToFile($receiptContent){
             $file = fopen("Sky online shop order summary.txt", "w") or die("Unable to open File!");
 
@@ -193,22 +193,24 @@
             echo "<div class = 'success'>Receipt crated successfully as Sky online shop order summary.txt!</div>";
         }
 
+        //use the functions
+        displayOrderSummary(); 
 
-        displayOrderSummary();
-
+//Insert data to database
         function insertDataToDatabase($name, $capeType, $size, $total_price, $instructions, $instrumentType){
-            include ("../php/database/database.php");
+            include ("../php/database/database.php"); //include database
 
             try{
-                $conn = new PDO("mysql:host=$db_host; dbname=$db_name", $db_username, $db_password);
+                $conn = new PDO("mysql:host=$db_host; dbname=$db_name", $db_username, $db_password); //use the variables we set from database.php
 
                 $conn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+                //sql query
                 $stmt = $conn -> prepare("INSERT INTO orders (name, cape_type, size, total_price, instructions, instrument_type)
                     VALUES (:name, :cape_type, :size, :total_price, :instructions, :instrument_type)");
 
                 $extraString = implode(", ", $instrumentType);
-
+    //bind param to sql query
                 $stmt->bindParam(':name', $name);
                 $stmt->bindParam(':cape_type', $capeType);
                 $stmt->bindParam(':size', $size);
@@ -216,7 +218,7 @@
                 $stmt->bindParam(':instructions', $instructions);
                 $stmt->bindParam(':instrument_type', $extraString);
 
-                $stmt->execute();
+                $stmt->execute();  //execute
                 echo "<div class = 'success'>Order details inserted into the database successfully!</div>";
             }
             catch (PDOException $e){
