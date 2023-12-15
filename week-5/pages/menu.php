@@ -1,5 +1,6 @@
 <?php
-    include("../php/database/database.php");
+//start session and check if we logged in
+    session_start();
     include ("../php/login-check.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
