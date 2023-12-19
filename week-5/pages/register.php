@@ -1,6 +1,5 @@
 <?php 
     include "../php/database/database.php";
-    include "../php/login-check.php"; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
